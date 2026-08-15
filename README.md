@@ -11,6 +11,7 @@
         />
       </a>
     </td>
+
     <td width="50%" align="center" valign="top">
       <a href="https://codeforces.com/profile/SemyaNiEl">
         <img
@@ -32,12 +33,25 @@
         />
       </a>
     </td>
+
     <td width="50%" align="center" valign="top">
       <a href="https://www.deep-ml.com/profile/1sQ5Fm3ANdfzi3dJHL8MprBzCtu1">
         <img
           src="./assets/deepml.svg"
           width="100%"
           alt="Deep-ML Stats"
+        />
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" align="center">
+      <a href="https://steamcommunity.com/id/SemyaNiEl/">
+        <img
+          src="./assets/steam.svg"
+          width="50%"
+          alt="Steam Stats"
         />
       </a>
     </td>
