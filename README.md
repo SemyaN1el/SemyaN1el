@@ -1,15 +1,11 @@
 <h1 align="center">SemyaN1el</h1>
 
-<!-- Contribution Graph -->
-
 <p align="center">
   <img
     src="https://github-readme-activity-graph.vercel.app/graph?username=SemyaN1el&bg_color=000000&color=ffffff&line=ffffff&point=ffffff&area=false&hide_border=false&custom_title=SemyaN1el%27s%20Contribution%20Graph"
     width="100%"
   />
 </p>
-
-<!-- GitHub Stats + Languages -->
 
 <table>
   <tr>
@@ -19,6 +15,7 @@
         width="100%"
       />
     </td>
+
     <td width="38%">
       <img
         src="https://github-stats-extended.vercel.app/api/top-langs/?username=SemyaN1el&layout=compact&langs_count=6&bg_color=000000&title_color=ffffff&text_color=ffffff&border_color=30363d&custom_title=Most%20Used%20Languages"
@@ -28,18 +25,17 @@
   </tr>
 </table>
 
-<!-- LeetCode + Codeforces -->
-
 <table>
   <tr>
     <td width="50%" align="center">
       <a href="https://leetcode.com/u/SemyaNiEl/">
         <img
-          src="https://leetcard.jacoblin.cool/SemyaNiEl?theme=dark&hide=ranking"
+          src="https://leetcard.jacoblin.cool/SemyaNiEl?theme=dark"
           width="100%"
         />
       </a>
     </td>
+
     <td width="50%" align="center">
       <a href="https://codeforces.com/profile/SemyaNiEl">
         <img
@@ -51,14 +47,8 @@
   </tr>
 </table>
 
-<!-- Deep-ML -->
-
 <p align="center">
   <a href="https://www.deep-ml.com/profile/1sQ5Fm3ANdfzi3dJHL8MprBzCtu1">
-    <img
-      src="https://img.shields.io/badge/Deep--ML-View%20Profile-111111?style=for-the-badge"
-      alt="Deep-ML"
-    />
+    <img src="./assets/deepml.svg" width="55%" />
   </a>
 </p>
-```
