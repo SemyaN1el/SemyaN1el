@@ -142,14 +142,16 @@ def fetch_deepml_stats() -> dict:
 def generate_svg(stats: dict) -> str:
     """Генерирует SVG-карточку."""
 
-    solved = stats["solved"]
     easy = stats["easy"]
     medium = stats["medium"]
     hard = stats["hard"]
     level = stats["level"]
     rank = stats["rank"]
 
-    total = max(solved, 1)
+
+    solved = easy + medium + hard
+    total = solved
+
 
     easy_percent = round(easy / total * 100)
     medium_percent = round(medium / total * 100)
