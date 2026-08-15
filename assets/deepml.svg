@@ -2,227 +2,231 @@
     width="520"
     height="200"
     viewBox="0 0 520 200"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
 >
-<style>
-    .title {
-        font-family: -apple-system, BlinkMacSystemFont,
-                     "Segoe UI", Helvetica, Arial, sans-serif;
-        font-size: 21px;
-        font-weight: 600;
-        fill: #f0f6fc;
-    }
+    <style>
+        .title {
+            font-family: -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 21px;
+            font-weight: 600;
+            fill: #f0f6fc;
+        }
 
-    .big {
-        font-family: -apple-system, BlinkMacSystemFont,
-                     "Segoe UI", Helvetica, Arial, sans-serif;
-        font-size: 28px;
-        font-weight: 700;
-        fill: #f0f6fc;
-    }
+        .big {
+            font-family: -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            fill: #f0f6fc;
+        }
 
-    .label {
-        font-family: -apple-system, BlinkMacSystemFont,
-                     "Segoe UI", Helvetica, Arial, sans-serif;
-        font-size: 13px;
-        font-weight: 500;
-        fill: #8b949e;
-    }
+        .label {
+            font-family: -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            fill: #8b949e;
+        }
 
-    .value {
-        font-family: -apple-system, BlinkMacSystemFont,
-                     "Segoe UI", Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        font-weight: 600;
-        fill: #f0f6fc;
-    }
+        .value {
+            font-family: -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            fill: #f0f6fc;
+        }
 
-    .footer {
-        font-family: -apple-system, BlinkMacSystemFont,
-                     "Segoe UI", Helvetica, Arial, sans-serif;
-        font-size: 10px;
-        fill: #484f58;
-    }
-</style>
+        .footer {
+            font-family: -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            fill: #484f58;
+        }
+    </style>
 
-<!-- Background -->
-<rect
-    x="0.5"
-    y="0.5"
-    width="519"
-    height="199"
-    rx="8"
-    fill="#000000"
-    stroke="#30363d"
-/>
+    <!-- Background -->
 
-<!-- Title -->
-<text
-    x="24"
-    y="35"
-    class="title"
->
-    Deep-ML Stats
-</text>
+    <rect
+        x="0.5"
+        y="0.5"
+        width="519"
+        height="199"
+        rx="8"
+        fill="#000000"
+        stroke="#30363d"
+    />
 
-<!-- Rank -->
-<text
-    x="496"
-    y="34"
-    text-anchor="end"
-    class="label"
->
-    Rank #453
-</text>
+    <!-- Header -->
 
-<!-- Main solved number -->
-<text
-    x="24"
-    y="82"
-    class="big"
->
-    12
-</text>
+    <text
+        x="24"
+        y="35"
+        class="title"
+    >
+        Deep-ML Stats
+    </text>
 
-<text
-    x="24"
-    y="102"
-    class="label"
->
-    Problems Solved
-</text>
+    <text
+        x="496"
+        y="34"
+        text-anchor="end"
+        class="label"
+    >
+        Rank #453
+    </text>
 
-<!-- Level -->
-<text
-    x="180"
-    y="82"
-    class="big"
->
-    14
-</text>
+    <!-- Solved -->
 
-<text
-    x="180"
-    y="102"
-    class="label"
->
-    Level
-</text>
+    <text
+        x="24"
+        y="82"
+        class="big"
+    >
+        72
+    </text>
 
-<!-- Difficulty labels -->
+    <text
+        x="24"
+        y="102"
+        class="label"
+    >
+        Problems Solved
+    </text>
 
-<circle
-    cx="27"
-    cy="133"
-    r="4"
-    fill="#2ecc71"
-/>
+    <!-- Level -->
 
-<text
-    x="39"
-    y="138"
-    class="label"
->
-    Easy
-</text>
+    <text
+        x="190"
+        y="82"
+        class="big"
+    >
+        14
+    </text>
 
-<text
-    x="90"
-    y="138"
-    class="value"
->
-    51
-</text>
+    <text
+        x="190"
+        y="102"
+        class="label"
+    >
+        Level
+    </text>
 
-<text
-    x="117"
-    y="138"
-    class="label"
->
-    425%
-</text>
+    <!-- Easy -->
 
+    <circle
+        cx="27"
+        cy="137"
+        r="4"
+        fill="#2ecc71"
+    />
 
-<circle
-    cx="184"
-    cy="133"
-    r="4"
-    fill="#f1c40f"
-/>
+    <text
+        x="39"
+        y="142"
+        class="label"
+    >
+        Easy
+    </text>
 
-<text
-    x="196"
-    y="138"
-    class="label"
->
-    Medium
-</text>
+    <text
+        x="82"
+        y="142"
+        class="value"
+    >
+        51
+    </text>
 
-<text
-    x="265"
-    y="138"
-    class="value"
->
-    17
-</text>
+    <text
+        x="110"
+        y="142"
+        class="label"
+    >
+        71%
+    </text>
 
-<text
-    x="292"
-    y="138"
-    class="label"
->
-    142%
-</text>
+    <!-- Medium -->
 
+    <circle
+        cx="178"
+        cy="137"
+        r="4"
+        fill="#f1c40f"
+    />
 
-<circle
-    cx="367"
-    cy="133"
-    r="4"
-    fill="#e74c3c"
-/>
+    <text
+        x="190"
+        y="142"
+        class="label"
+    >
+        Medium
+    </text>
 
-<text
-    x="379"
-    y="138"
-    class="label"
->
-    Hard
-</text>
+    <text
+        x="253"
+        y="142"
+        class="value"
+    >
+        17
+    </text>
 
-<text
-    x="425"
-    y="138"
-    class="value"
->
-    4
-</text>
+    <text
+        x="281"
+        y="142"
+        class="label"
+    >
+        24%
+    </text>
 
-<text
-    x="450"
-    y="138"
-    class="label"
->
-    33%
-</text>
+    <!-- Hard -->
 
-<!-- Footer -->
-<text
-    x="24"
-    y="178"
-    class="footer"
->
-    Updated automatically
-</text>
+    <circle
+        cx="363"
+        cy="137"
+        r="4"
+        fill="#e74c3c"
+    />
 
-<text
-    x="496"
-    y="178"
-    text-anchor="end"
-    class="footer"
->
-    2026-08-15 15:18 UTC
-</text>
+    <text
+        x="375"
+        y="142"
+        class="label"
+    >
+        Hard
+    </text>
 
+    <text
+        x="418"
+        y="142"
+        class="value"
+    >
+        4
+    </text>
+
+    <text
+        x="443"
+        y="142"
+        class="label"
+    >
+        6%
+    </text>
+
+    <!-- Footer -->
+
+    <text
+        x="24"
+        y="179"
+        class="footer"
+    >
+        Updated automatically
+    </text>
+
+    <text
+        x="496"
+        y="179"
+        text-anchor="end"
+        class="footer"
+    >
+        2026-08-15 15:26 UTC
+    </text>
 </svg>
