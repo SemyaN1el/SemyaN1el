@@ -76,29 +76,26 @@ def fetch_stats():
 
     print("Deep-ML page loaded.")
 
-    solved = extract(
-        r"\bSolved\s+(\d+)",
-        text,
-        "solved"
-    )
-
     easy = extract(
-        r"\bEasy\s+(\d+)",
-        text,
-        "easy"
+    r"\bEasy\s+(\d+)",
+    text,
+    "easy"
     )
-
+    
     medium = extract(
         r"\bMedium\s+(\d+)",
         text,
         "medium"
     )
-
+    
     hard = extract(
         r"\bHard\s+(\d+)",
         text,
         "hard"
     )
+
+# Надёжнее считать total из difficulty
+solved = easy + medium + hard
 
     level = extract(
         r"\b(?:LV|Level)\.?\s*(\d+)",
