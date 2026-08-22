@@ -73,7 +73,7 @@
         text-anchor="end"
         class="label"
     >
-        Offline
+        Online
     </text>
 
     <!-- Level -->
@@ -243,6 +243,6 @@
         text-anchor="end"
         class="footer"
     >
-        2026-08-22 06:58 UTC
+        2026-08-22 13:00 UTC
     </text>
 </svg>
