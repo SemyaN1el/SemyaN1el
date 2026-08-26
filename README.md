@@ -40,10 +40,8 @@
   <img src="https://img.shields.io/badge/PEFT-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/LoRA-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/SFT-333333?style=flat-square" />
-  <img src="https://img.shields.io/badge/4--bit_Quantization-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/Quantization-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/Knowledge_Distillation-333333?style=flat-square" />
-  <img src="https://img.shields.io/badge/Domain_Adaptation-333333?style=flat-square" />
-  <img src="https://img.shields.io/badge/Ensembling-333333?style=flat-square" />
 </p>
 
 </td>
