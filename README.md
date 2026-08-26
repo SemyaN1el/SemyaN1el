@@ -8,6 +8,10 @@
   Production-oriented ML · RAG · Backend · Statistics
 </p>
 
+<p align="center">
+  Building ML systems from data and experiments to inference, APIs and deployment.
+</p>
+
 ---
 
 <h2 align="center">Tech Stack</h2>
@@ -33,23 +37,30 @@
   <img src="https://img.shields.io/badge/CNN-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/RNN_%2F_GRU-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/Fine--tuning-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/PEFT-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/LoRA-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/SFT-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/4--bit_Quantization-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/Knowledge_Distillation-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/Domain_Adaptation-333333?style=flat-square" />
-  <img src="https://img.shields.io/badge/Classical_ML-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/Ensembling-333333?style=flat-square" />
 </p>
 
 </td>
 
 <td width="50%" valign="top">
 
-<h3>NLP / LLM</h3>
+<h3>NLP / LLM / Retrieval</h3>
 
 <p>
   <img src="https://img.shields.io/badge/NLP-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/LLM-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/Text_Classification-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/RAG-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/Agentic_RAG-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/Embeddings-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/Dense_Retrieval-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/Hybrid_Retrieval-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/Reranking-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/BM25_%2B_RRF-333333?style=flat-square" />
 </p>
@@ -61,6 +72,7 @@
 </p>
 
 </td>
+
 </tr>
 
 <tr>
@@ -85,6 +97,8 @@
   <img src="https://img.shields.io/badge/Bootstrap-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/Confidence_Intervals-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/Power_Analysis-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/Calibration-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/Grouped_Validation-333333?style=flat-square" />
 </p>
 
 </td>
@@ -105,17 +119,19 @@
 <p>
   <img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" />
   <img src="https://img.shields.io/badge/unittest-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/CI%2FCD-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
   <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
   <img src="https://img.shields.io/badge/Git_LFS-F64935?style=flat-square&logo=git&logoColor=white" />
 </p>
 
 </td>
+
 </tr>
 </table>
 
 <details>
-<summary><b>More ML / Data tools</b></summary>
+<summary><b>More ML / Data Tools</b></summary>
 
 <br>
 
@@ -127,24 +143,12 @@
   <img src="https://img.shields.io/badge/spaCy-09A3D5?style=flat-square&logo=spacy&logoColor=white" />
   <img src="https://img.shields.io/badge/tokenizers-FFD21E?style=flat-square&logo=huggingface&logoColor=black" />
   <img src="https://img.shields.io/badge/datasets-FFD21E?style=flat-square&logo=huggingface&logoColor=black" />
+  <img src="https://img.shields.io/badge/TRL-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/Unsloth-333333?style=flat-square" />
+  <img src="https://img.shields.io/badge/bitsandbytes-333333?style=flat-square" />
   <img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square" />
   <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square" />
   <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" />
-</p>
-
-</details>
-
-<details>
-<summary><b>Methods</b></summary>
-
-<br>
-
-<p>
-  <img src="https://img.shields.io/badge/Supervised_Learning-333333?style=flat-square" />
-  <img src="https://img.shields.io/badge/Clustering-333333?style=flat-square" />
-  <img src="https://img.shields.io/badge/Grouped_Validation-333333?style=flat-square" />
-  <img src="https://img.shields.io/badge/Calibration-333333?style=flat-square" />
-  <img src="https://img.shields.io/badge/Hyperparameter_Optimization-333333?style=flat-square" />
 </p>
 
 </details>
@@ -163,22 +167,91 @@
 
 </details>
 
-<details>
-<summary><b>Currently learning</b></summary>
+---
 
-<br>
+<h2 align="center">Featured Projects</h2>
 
-<p>
-  <img src="https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
-</p>
+### [Multi-domain Russian Toxic Comment Classification](https://github.com/SemyaN1el/toxicDeviantCommentClassifier)
 
-</details>
+Research-oriented comparison of classical ML, CNN/RNN architectures and Transformers for Russian toxic comment classification.
+
+* TF-IDF / Hashing + LinearSVC, CatBoost, TextCNN, CharCNN, WordCNN and BiGRU
+* RuBERT and ruRoBERTa-large fine-tuning
+* Knowledge distillation and domain adaptation
+* Domain shift and catastrophic forgetting experiments
+* Threshold calibration and multi-domain evaluation
+* Paired stratified bootstrap and McNemar statistical testing
+* Compact production-oriented CPU inference models
+
+`PyTorch` · `Transformers` · `scikit-learn` · `Optuna` · `Knowledge Distillation`
 
 ---
 
-<h2 align="center">Stats</h2>
+### [Controlled Agentic RAG Chatbot](https://github.com/SemyaN1el/rag_chatbot)
+
+RAG service for question answering over PDF documents with vector and hybrid retrieval.
+
+* BM25 + semantic retrieval with Reciprocal Rank Fusion
+* Qdrant vector storage
+* Controlled agent runtime with routing and tool layer
+* Redis session memory and response caching
+* PostgreSQL request history
+* Guardrails, policy checks and runtime budgets
+* Deterministic agent evaluation harness
+* REST API with FastAPI
+
+`FastAPI` · `LangChain` · `Qdrant` · `Redis` · `PostgreSQL` · `Docker`
+
+---
+
+### [LoRA Fine-Tuning with Unsloth](https://github.com/SemyaN1el/lora-fine-tune-a-tiny-chat-model-with-unsloth)
+
+End-to-end parameter-efficient fine-tuning pipeline for a quantized Qwen2.5 chat model.
+
+* 4-bit quantized base model
+* LoRA adapters
+* PEFT
+* Supervised Fine-Tuning
+* TRL `SFTTrainer`
+* Unsloth
+* bitsandbytes
+* Training and inference pipeline
+
+`LoRA` · `PEFT` · `SFT` · `TRL` · `Unsloth` · `HuggingFace`
+
+---
+
+### [Automatic Video Dubbing](https://github.com/SemyaN1el/vid_dub)
+
+End-to-end EN → RU video dubbing pipeline with speaker voice preservation and synchronization.
+
+* Whisper-based speech recognition
+* LLM-assisted translation
+* Voice cloning through ElevenLabs / XTTS-v2
+* FFmpeg-based audio and video processing
+* Smart synchronization of translated speech
+* API, tests, Docker and CI configuration
+
+`Python` · `Whisper` · `FFmpeg` · `Docker` · `CI/CD`
+
+---
+
+### [Credit Scoring](https://github.com/SemyaN1el/credit-scoring)
+
+Classical ML project focused on robust validation and customer credit-rating classification.
+
+* Data cleaning and EDA
+* Customer-disjoint validation
+* StratifiedGroupKFold
+* CatBoost and classical ML baselines
+* Soft-voting ensembling
+* Reproducible inference pipeline and tests
+
+`scikit-learn` · `CatBoost` · `pandas` · `NumPy` · `pytest`
+
+---
+
+<h2 align="center">Stats & Practice</h2>
 
 <table width="100%">
 <tr>
