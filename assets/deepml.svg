@@ -73,7 +73,7 @@
         text-anchor="end"
         class="label"
     >
-        Rank #485
+        Rank #483
     </text>
 
     <!-- Solved -->
@@ -83,7 +83,7 @@
         y="82"
         class="big"
     >
-        72
+        73
     </text>
 
     <text
@@ -134,7 +134,7 @@
         y="142"
         class="value"
     >
-        51
+        52
     </text>
 
     <text
@@ -175,7 +175,7 @@
         y="142"
         class="label"
     >
-        24%
+        23%
     </text>
 
     <!-- Hard -->
@@ -208,7 +208,7 @@
         y="142"
         class="label"
     >
-        6%
+        5%
     </text>
 
     <!-- Footer -->
@@ -227,6 +227,6 @@
         text-anchor="end"
         class="footer"
     >
-        2026-09-30 12:32 UTC
+        2026-09-30 22:14 UTC
     </text>
 </svg>
