@@ -1,4 +1,4 @@
-<h1 align="center">SemyaN1el</h1>
+<h1 align="center">Daniil Semyachkin</h1>
 
 <p align="center">
   <b>Junior ML Engineer · NLP / LLM</b>
