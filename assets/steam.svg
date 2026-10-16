@@ -176,7 +176,7 @@
         y="141"
         class="value"
     >
-        22
+        0
     </text>
 
 
@@ -200,7 +200,7 @@
         y="141"
         class="value"
     >
-        47%
+        0%
     </text>
 
 
@@ -224,7 +224,7 @@
         y="141"
         class="value"
     >
-        33.1h
+        31.3h
     </text>
 
     <!-- Footer -->
@@ -243,6 +243,6 @@
         text-anchor="end"
         class="footer"
     >
-        2026-10-15 16:59 UTC
+        2026-10-16 04:29 UTC
     </text>
 </svg>
