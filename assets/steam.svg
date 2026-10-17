@@ -73,7 +73,7 @@
         text-anchor="end"
         class="label"
     >
-        In Game
+        Online
     </text>
 
     <!-- Level -->
@@ -224,7 +224,7 @@
         y="141"
         class="value"
     >
-        18.6h
+        15.5h
     </text>
 
     <!-- Footer -->
@@ -243,6 +243,6 @@
         text-anchor="end"
         class="footer"
     >
-        2026-10-17 15:32 UTC
+        2026-10-17 20:35 UTC
     </text>
 </svg>
