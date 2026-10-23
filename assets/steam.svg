@@ -73,7 +73,7 @@
         text-anchor="end"
         class="label"
     >
-        Online
+        Offline
     </text>
 
     <!-- Level -->
@@ -224,7 +224,7 @@
         y="141"
         class="value"
     >
-        15.5h
+        16.2h
     </text>
 
     <!-- Footer -->
@@ -243,6 +243,6 @@
         text-anchor="end"
         class="footer"
     >
-        2026-10-22 21:34 UTC
+        2026-10-23 04:50 UTC
     </text>
 </svg>
