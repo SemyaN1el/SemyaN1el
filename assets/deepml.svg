@@ -73,7 +73,7 @@
         text-anchor="end"
         class="label"
     >
-        Rank #420
+        Rank #389
     </text>
 
     <!-- Solved -->
@@ -83,7 +83,7 @@
         y="82"
         class="big"
     >
-        93
+        99
     </text>
 
     <text
@@ -101,7 +101,7 @@
         y="82"
         class="big"
     >
-        15
+        16
     </text>
 
     <text
@@ -134,7 +134,7 @@
         y="142"
         class="value"
     >
-        67
+        68
     </text>
 
     <text
@@ -142,7 +142,7 @@
         y="142"
         class="label"
     >
-        72%
+        69%
     </text>
 
     <!-- Medium -->
@@ -167,7 +167,7 @@
         y="142"
         class="value"
     >
-        21
+        26
     </text>
 
     <text
@@ -175,7 +175,7 @@
         y="142"
         class="label"
     >
-        23%
+        26%
     </text>
 
     <!-- Hard -->
@@ -227,6 +227,6 @@
         text-anchor="end"
         class="footer"
     >
-        2026-10-29 12:57 UTC
+        2026-10-29 22:43 UTC
     </text>
 </svg>
