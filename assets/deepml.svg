@@ -73,7 +73,7 @@
         text-anchor="end"
         class="label"
     >
-        Rank #375
+        Rank #371
     </text>
 
     <!-- Solved -->
@@ -83,7 +83,7 @@
         y="82"
         class="big"
     >
-        103
+        105
     </text>
 
     <text
@@ -134,7 +134,7 @@
         y="142"
         class="value"
     >
-        70
+        72
     </text>
 
     <text
@@ -142,7 +142,7 @@
         y="142"
         class="label"
     >
-        68%
+        69%
     </text>
 
     <!-- Medium -->
@@ -227,6 +227,6 @@
         text-anchor="end"
         class="footer"
     >
-        2026-10-31 21:31 UTC
+        2026-11-01 05:59 UTC
     </text>
 </svg>
