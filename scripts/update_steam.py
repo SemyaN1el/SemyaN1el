@@ -1,3 +1,163 @@
+import re
+from datetime import datetime, timezone
+from pathlib import Path
+
+from playwright.sync_api import sync_playwright
+
+
+# Force Steam's English interface so that text labels are predictable.
+PROFILE_URL = "https://steamcommunity.com/id/SemyaNiEl/?l=english"
+OUTPUT_FILE = Path("assets/steam.svg")
+
+# Public profile and Games tab use different labels/ordering.
+# Source: Steam's "Completed" tab (formerly "Perfect Games").
+GAMES_URL = "https://steamcommunity.com/id/SemyaNiEl/games/?tab=perfect&l=english"
+
+
+def normalize_text(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def extract(pattern: str, text: str, field: str, default=None) -> str:
+    match = re.search(pattern, text, flags=re.IGNORECASE)
+    if match:
+        return match.group(1)
+    if default is not None:
+        print(f"WARNING: Steam field '{field}' not found; using {default!r}")
+        return default
+    raise RuntimeError(f"Could not find '{field}' in Steam profile")
+
+
+def parse_number(raw: str) -> int:
+    return int(re.sub(r"[^0-9]", "", raw))
+
+
+def extract_completed_games(text: str, *, from_games_tab: bool = False):
+    """Return a number only if Steam explicitly prints the relevant counter."""
+    text = normalize_text(text)
+    patterns = [
+        r"\b([\d,]+)\s+(?:Completed|Perfect)\s+Games\b",
+        r"\b(?:Completed|Perfect)\s+Games\s*[:(]?\s*([\d,]+)\b",
+        r"\b([\d,]+)\s+Games\s+Completed\b",
+        r"\bGames\s+Completed\s*[:(]?\s*([\d,]+)\b",
+    ]
+    if from_games_tab:
+        # Current/legacy Steam games-tab labels may be simply "Completed (12)".
+        patterns.extend([
+            r"\bCompleted\s*\(\s*([\d,]+)\s*\)",
+            r"\bPerfect\s*\(\s*([\d,]+)\s*\)",
+        ])
+
+    for pattern in patterns:
+        match = re.search(pattern, text, flags=re.IGNORECASE)
+        if match:
+            return parse_number(match.group(1))
+    return None
+
+
+def games_tab_count(page):
+    """Cross-check against the public Games > Completed tab, not a showcase."""
+    print(f"Checking Steam completed-games tab: {GAMES_URL}")
+    try:
+        response = page.goto(GAMES_URL, wait_until="domcontentloaded", timeout=60_000)
+        if response and response.status >= 400:
+            print(f"WARNING: Games tab returned HTTP {response.status}")
+            return None
+        page.wait_for_timeout(3000)
+
+        # The navigation link is more specific than the full text on the page.
+        # Restrict the bare 'Completed (N)' expression to that navigation area.
+        tabs = page.locator(
+            'a[href*="tab=perfect"], a[href*="tab=completed"], '
+            '[data-tab="perfect"], [data-tab="completed"]'
+        )
+        for index in range(min(tabs.count(), 12)):
+            tab = tabs.nth(index)
+            snippets = [tab.inner_text(timeout=3000), tab.get_attribute("title") or ""]
+            for snippet in snippets:
+                number = extract_completed_games(snippet, from_games_tab=True)
+                if number is not None:
+                    print(f"Games tab navigation shows {number} completed games")
+                    return number
+
+        body_text = page.locator("body").inner_text(timeout=30_000)
+        number = extract_completed_games(body_text, from_games_tab=True)
+        if number is not None:
+            print(f"Games tab body shows {number} completed games")
+            return number
+        print("WARNING: No completed-games counter in Games tab.")
+        print("Games tab text sample:", normalize_text(body_text)[:1200])
+        return None
+    except Exception as exc:
+        print(f"WARNING: Games tab could not be parsed: {exc}")
+        return None
+
+
+def fetch_steam_stats() -> dict:
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True)
+        try:
+            page = browser.new_page(
+                viewport={"width": 1440, "height": 1200}, locale="en-US"
+            )
+            print(f"Opening Steam profile: {PROFILE_URL}")
+            response = page.goto(
+                PROFILE_URL, wait_until="domcontentloaded", timeout=120_000
+            )
+            if response and response.status >= 400:
+                raise RuntimeError(f"Steam profile returned HTTP {response.status}")
+            page.wait_for_function(
+                r"""() => {
+                    const text = document.body.innerText.replace(/\s+/g, ' ');
+                    return /\bLevel\s+[\d,]+/i.test(text)
+                        && /\bGames\s+[\d,]+/i.test(text);
+                }""",
+                timeout=90_000,
+            )
+            page.wait_for_timeout(2000)
+            profile_text = normalize_text(page.locator("body").inner_text())
+            profile_count = extract_completed_games(profile_text)
+            print(f"Completed games (profile showcase): {profile_count}")
+
+            # Even when the showcase is absent or displays zero, the Games tab
+            # may expose the correct counter.
+            tab_count = games_tab_count(page) if not profile_count else None
+        finally:
+            browser.close()
+
+    print("Steam profile loaded.")
+    level = parse_number(extract(r"\bLevel\s+([\d,]+)", profile_text, "level"))
+    games = parse_number(extract(r"\bGames\s+([\d,]+)", profile_text, "games"))
+
+    perfect_games = profile_count if profile_count else tab_count
+    if not perfect_games:
+        print("Profile snippets around completed/perfect counters:")
+        for match in list(re.finditer(r"completed|perfect", profile_text, re.I))[:8]:
+            print(repr(profile_text[max(0, match.start()-65):match.end()+65]))
+        raise RuntimeError(
+            "No positive completed-games counter was found on the Steam profile "
+            "or its Games tab. Refusing to overwrite assets/steam.svg with zero. "
+            "Check the GitHub Actions log for the Steam page text sample."
+        )
+
+    badges = parse_number(extract(r"\bBadges\s+([\d,]+)", profile_text, "badges", "0"))
+    completion_rate = int(extract(
+        r"(\d+)%\s+Avg\.?\s+Game Completion Rate", profile_text,
+        "completion rate", "0"
+    ))
+    recent_hours = extract(
+        r"([\d,.]+)\s+hours past 2 weeks", profile_text,
+        "recent hours", "0"
+    )
+    achievements = parse_number(extract(
+        r"Achievement Showcase\s+([\d,]+)\s+Achievements", profile_text,
+        "achievements", "0"
+    ))
+
+    if "Currently In-Game" in profile_text:
+        status = "In Game"
+    elif "Currently Online" in profile_text:
+        status = "Online"
     else:
         status = "Offline"
 
