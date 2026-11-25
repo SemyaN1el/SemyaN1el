@@ -34,7 +34,7 @@
 
     <!-- Header -->
     <text x="24" y="35" class="title">Steam Stats</text>
-    <text x="496" y="34" text-anchor="end" class="label">Online</text>
+    <text x="496" y="34" text-anchor="end" class="label">Offline</text>
 
     <!-- Main counters -->
     <text x="24" y="82" class="big">63</text>
@@ -65,5 +65,5 @@
 
     <!-- Footer -->
     <text x="24" y="179" class="footer">Updated automatically</text>
-    <text x="496" y="179" text-anchor="end" class="footer">2026-11-24 22:24 UTC</text>
+    <text x="496" y="179" text-anchor="end" class="footer">2026-11-25 08:28 UTC</text>
 </svg>
